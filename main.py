@@ -1,3 +1,3 @@
-import Controllers.menuController
+from Controllers.menuController import printMainMenu
 
-Controllers.menuController.printMainMenu()
+printMainMenu()
