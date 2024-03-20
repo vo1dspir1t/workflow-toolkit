@@ -29,6 +29,7 @@ def publishImage(path):
         print('Публикация: Файл успешно выгружен.')
     except FileNotFoundError:
         print("Публикация: Файл не найден.")
+    ftp.quit()
 
 def makeChanges(fileName):
     path = config["Filesystem"]["workdir"]

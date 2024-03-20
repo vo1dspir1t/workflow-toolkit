@@ -65,5 +65,6 @@ table += '</tbody></table>'
 with open('table.txt', 'w', encoding='utf-8') as textFile:
     textFile.write(table)
 
+ftp.quit()
 print("Таблица успешно сформирована.")
 input("Нажмите Enter, чтобы завершить работу.")

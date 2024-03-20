@@ -38,6 +38,7 @@ def ftpUploader(option):
                 os.rename(file, "103b79ae27b2c177271584efe36286be.jpg")
                 ftpstorBinary(dirPath, "103b79ae27b2c177271584efe36286be.jpg")
                 shutil.move("103b79ae27b2c177271584efe36286be.jpg", "Stored\\103b79ae27b2c177271584efe36286be.jpg")
+        ftp.quit()
     if option == "vacancies":
         dirPath = "OtherImages\\Vacancies\\"
         constFileNames = ["8c99db44a6c67eb2fed348df9a193a61.jpg", "e8479276529b62721188f60537f538ac.jpg"]
@@ -49,6 +50,7 @@ def ftpUploader(option):
                 os.rename(file, constFileNames[index])
                 ftpstorBinary(dirPath, constFileNames[index])
                 shutil.move(constFileNames[index], "Stored\\"+constFileNames[index])
+        ftp.quit()
     if option == "other":
         dirPath = "OtherImages\\Other\\"
         os.system("explorer "+downloadPath+dirPath)
@@ -66,6 +68,7 @@ def ftpUploader(option):
             os.rename(file, fileName)
             ftpstorBinary(dirPath, fileName)
             shutil.move(fileName, "Stored\\"+fileName)
+        ftp.quit()
         
 def ftpstorBinary(pathName, fileName):
     try:
