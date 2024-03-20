@@ -12,24 +12,24 @@ def toolController(input):
     if (input == "0"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\changes.py')
     if (input == "1"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\images4news.py')
-    if (input == "2"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\DOMFormatter.py')
-    if (input == "3"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\mergingImages.py')
-    if (input == "4"):
-        printUIMenu()
-    if (input == "5"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\convertDoc.py')
-    if (input == "6"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\cutImage.py')
-    if (input == "7"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\docxtoTxt.py')
-    if (input == "8"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\convertImage.py')
-    if (input == "9"):
-        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\backupFolder.py')
-    if (input == "10"):
+    if (input == "2"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\createNewsDir.py')
-    if (input == "11"):
+    if (input == "3"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\startPublication.py')
+    if (input == "4"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\mergingImages.py')
+    if (input == "5"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\cutImage.py')
+    if (input == "6"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\images4news.py')
+    if (input == "7"):
+        printUIMenu()
+    if (input == "8"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\convertDoc.py')
+    if (input == "9"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\docxtoTxt.py')
+    if (input == "10"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\convertImage.py')
+    if (input == "11"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\backupFolder.py')
