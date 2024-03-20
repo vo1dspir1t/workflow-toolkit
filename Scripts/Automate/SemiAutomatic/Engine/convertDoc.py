@@ -60,14 +60,6 @@ def convertDocument(
     for i in range(len(images)):
         images[i].save(path+"Output\\"+docxFile.split(".")[0]+'\\page_'+ str(i) +'.jpg', 'JPEG')
     
-<<<<<<< HEAD
-    if os.path.exists(path+"Moved\\"+docxFile):
-        os.remove(path+docxFile)
-    move(path+docxFile, path+"Moved\\")
-    
-    if os.path.exists(path+"Output\\"+docxFile.split(".")[0]+".pdf"):
-        os.remove(path+docxFile.split(".")[0]+".pdf")
-=======
     if fileMode == "docx":
         if os.path.exists(path+"Moved\\"+docxFile):
             os.remove(path+"Moved\\"+docxFile)
@@ -75,7 +67,6 @@ def convertDocument(
     
     if os.path.exists(path+"Output\\"+docxFile.split(".")[0]+".pdf"):
         os.remove(path+"Output\\"+docxFile.split(".")[0]+".pdf")
->>>>>>> ffa0460cde0c28e06b58e61b372994c66188aed9
     move(path+docxFile.split(".")[0]+".pdf", path+"Output\\")
         
     if mode == "semi":
