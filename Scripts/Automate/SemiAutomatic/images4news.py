@@ -2,11 +2,8 @@ import os
 import hashlib
 from ftplib import FTP
 from time import time
-<<<<<<< HEAD
-=======
 from shutil import copy
 from sys import argv
->>>>>>> ffa0460cde0c28e06b58e61b372994c66188aed9
 
 import configparser
 config = configparser.ConfigParser()
@@ -19,9 +16,7 @@ while True:
     try:
         print("Подключаемся к удалённому серверу...")
         ftp = FTP(host=config['FTP']['host'], timeout=600)
-        ftp.port = 21
         ftp.login(user=config['FTP']['username'], passwd=config['FTP']['password'])
-        ftp.set_pasv(False)
         print("Подключение успешно установлено!")
     except TimeoutError:
         print("Не удалось соединиться с сервером. Проверьте ваше подключение.")

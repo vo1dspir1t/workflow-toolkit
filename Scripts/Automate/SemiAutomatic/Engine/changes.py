@@ -13,9 +13,7 @@ def publishImage(path):
         try:
             print("Подключаемся к удалённому серверу...")
             ftp = FTP(host=config['FTP']['host'], timeout=600)
-            ftp.port = 21
             ftp.login(user=config['FTP']['username'], passwd=config['FTP']['password'])
-            ftp.set_pasv(False)
             print("Подключение успешно установлено!")
         except TimeoutError:
             print("Не удалось соединиться с сервером. Проверьте ваше подключение.")
