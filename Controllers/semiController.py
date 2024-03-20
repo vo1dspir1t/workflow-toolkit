@@ -31,3 +31,5 @@ def toolController(input):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\backupFolder.py')
     if (input == "10"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\createNewsDir.py')
+    if (input == "11"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\startPublication.py')

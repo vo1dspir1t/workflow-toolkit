@@ -11,4 +11,4 @@ def toolController(input):
     if (input == "0"):
         os.system("start cmd /k py .\\Scripts\\Automate\\automateChanges.py")
     if (input == "1"):
-        os.system("start cmd /k py .\\Scripts\\Automate\\AutoNews\\automateNews.py")
+        os.system("start cmd /k py .\\Scripts\\Automate\\automateNews.py")
