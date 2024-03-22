@@ -13,12 +13,17 @@ os.chdir(config['Filesystem']['mgrfolder']+"Web\\")
 os.system("explorer story.xlsx")
 wb.open("https://feopoliteh.ru/admin/news/add")
 
-os.chdir(path)
+def startPublicating():
 
-for dir in os.listdir():
-    if os.path.isdir(dir) and dir != "Stored":
-        os.system("explorer {0}\\Layout\\Макет.txt".format(dir))
-        input("Нажмите Enter, чтобы перейти к следующей новости")
-        move(dir, "Stored")
+    os.chdir(path)
 
-print("Все новости успешно обработаны!")
+    for dir in os.listdir():
+        if os.path.isdir(dir) and dir != "Stored":
+            os.system("explorer {0}\\Layout\\Макет.txt".format(dir))
+            input("Нажмите Enter, чтобы перейти к следующей новости")
+            move(dir, "Stored")
+
+    print("Все новости успешно обработаны!")
+    
+if __name__ == "__main__":
+    startPublicating()

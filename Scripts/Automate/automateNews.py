@@ -8,6 +8,7 @@ from time import time, sleep
 from subprocess import Popen
 from itertools import count
 from shutil import copy, move
+from SemiAutomatic.startPublication import startPublicating
 
 config = configparser.ConfigParser()
 config.read("settings.ini")
@@ -173,6 +174,7 @@ def AutomateNews():
     uploadImagesOnServer()
     formattingNews()
     moveFolderToReady(foundDir)
+    startPublicating()
     AutomateNews()
 
 foldersStatus()
