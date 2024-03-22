@@ -1,6 +1,7 @@
 import os
 
 def installDependency(number: int):
+    print("Начинаем устанавливать зависимость...")
     os.system('pip install {}'.format(dependenciesList[number]))
 
 def printListOfDependencies(index, dependencyName):
