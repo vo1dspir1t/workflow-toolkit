@@ -20,4 +20,6 @@ def toolController(input):
         os.system('start cmd /k py .\\Scripts\\Automate\\initializeProject.py')
     if (input == "S"):
         os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\showConfig.py')
+    if (input == "D"):
+        os.system('start cmd /k py .\\Scripts\\Automate\\SemiAutomatic\\installDependencyFromFile.py')
     
