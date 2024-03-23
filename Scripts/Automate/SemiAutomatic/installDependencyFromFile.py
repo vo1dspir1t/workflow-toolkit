@@ -1,17 +1,17 @@
 import os
 
-def installDependency(number: int):
-    print("Начинаем устанавливать зависимость...")
-    os.system('pip install {}'.format(dependenciesList[number]))
-
 def printListOfDependencies(index, dependencyName):
     print("[{}]: {}".format(index, dependencyName))
 
-with open('dependencies.lst') as dependencies:
-    dependenciesList = dependencies.read().split()
-dependencies.close()
+def readDependenciesList():
+    with open('dependencies.lst') as dependencies:
+        return dependencies.read().split()
+    
+def installDependency():
+    dependenciesList = readDependenciesList()
+    [printListOfDependencies(index, dependencyName) for index, dependencyName in enumerate(dependenciesList)]
+    number = int(input("Установить зависимость: "))
+    print("Начинаем устанавливать {}...".format(dependenciesList[number]))
+    os.system('pip install {}'.format(dependenciesList[number]))
 
-for index, dependencyName in enumerate(dependenciesList):
-    printListOfDependencies(index, dependencyName)
-
-installDependency(int(input("Установить зависимость: ")))
+installDependency()
