@@ -11,6 +11,7 @@ path = config['Filesystem']['mgrfolder']+"Web\\{0}\\{1}\\Ready\\".format(date.to
 
 os.chdir(config['Filesystem']['mgrfolder']+"Web\\")
 os.system("explorer story.xlsx")
+wb.open("https://feopoliteh.ru/news")
 wb.open("https://feopoliteh.ru/admin/news/add")
 
 def startPublicating():
