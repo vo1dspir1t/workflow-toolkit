@@ -1,6 +1,5 @@
 import os
 import datetime
-import configparser
 import docx2txt
 import hashlib
 from ftplib import FTP
@@ -8,6 +7,7 @@ from time import time, sleep
 from subprocess import Popen
 from itertools import count
 from shutil import copy, move
+from calendar import month_name
 from SemiAutomatic.startPublication import startPublicating, config
 
 while True:
@@ -32,6 +32,9 @@ def foldersStatus():
     if not os.path.exists(actualDir):
         os.makedirs(actualDir+'Ready/Stored')
     
+    for month in list(month_name)[1:]:
+        if os.path.exists(config['Filesystem']['mgrfolder']+"Web\\"+month) and month != datetime.date.today().strftime("%B"):
+            move(config['Filesystem']['mgrfolder']+"Web\\"+month, config['Filesystem']['mgrfolder']+"Web\\Archive")
     Popen(['explorer', actualDir])
     print("Открываем сегодняшнюю директорию новостей...")
     sleep(5)
