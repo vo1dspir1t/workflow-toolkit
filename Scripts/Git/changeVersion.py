@@ -1,6 +1,6 @@
 def projectVersion():
-    print("\n[0]: Глобальные изменения\n[1]: Добавление функции\n[2]: Изменение функции\n[3]: Фикс ошибок")
-    changesType = int(input("Тип изменений: ").strip() or "3")
+    print("\n[0]: Major - крупные изменения, либо изменения несовместимые с предыдущей версией;\n[1]: Minor - добавление функционала без нарушения совместимости;\n[2]: Maintenance - исправления.")
+    changesType = int(input("Тип изменений: ").strip() or "2")
 
     with open("version.ini", 'r+') as file:
         outdatedVersion = file.read().split(".")
